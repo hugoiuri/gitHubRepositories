@@ -1,27 +1,23 @@
 (function() {
 
-  var app = angular.module("githubViwer", []);
+  var app = angular.module("gitHubViewer", []);
 
-  var MainController = function($scope, $http) {
+  var MainController = function($scope, gitHub) {
 
     $scope.message = "Hello Angular!";
 
 
-    var onRepos = function(response) {
+    var onRepositoriesComplete = function(data) {
 
-      $scope.repos = response.data;
+        $scope.repos = data;
 
-      console.log($scope.repos);
     };
 
-    var onUserComplete = function(response) {
+    var onUserComplete = function(data) {
 
-      $scope.user = response.data;
+      $scope.user = data;
 
-      console.log($scope.user.repos_url);
-
-      $http.get($scope.user.repos_url)
-        .then(onRepos, onError);
+      gitHub.getRepositories($scope.user).then(onRepositoriesComplete, onError);
 
     };
 
@@ -29,17 +25,17 @@
 
       $scope.error = "Could not fetch the data!";
 
-    }
+    };
 
     $scope.search = function(username) {
 
-      $http.get("https://api.github.com/users/" + username)
-        .then(onUserComplete, onError);
+      gitHub.getUser(username).then(onUserComplete, onError);
 
-    }
+    };
+
+
   };
 
-  app.controller("MainController", ["$scope", "$http", MainController]);
-
+  app.controller("MainController", ["$scope", "gitHub", MainController]);
 
 }());
