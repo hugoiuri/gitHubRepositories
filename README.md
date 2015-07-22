@@ -6,7 +6,6 @@ Para executar este projeto basta executar os seguintes comandos:
 
 ```sh
     $ npm install
-    $ bower install
     $ npm start
 ```
 #### Os pacotes npm utilizados neste projeto são:
