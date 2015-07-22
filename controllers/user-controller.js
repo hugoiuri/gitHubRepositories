@@ -1,11 +1,8 @@
 (function() {
 
-  var app = angular.module("gitHubViewer");
+  var app = angular.module("gitHubRepositories");
 
-  var MainController = function($scope, gitHub) {
-
-    $scope.message = "Hello Angular!";
-
+  var UserController = function($scope, $routeParams, gitHub) {
 
     var onRepositoriesComplete = function(data) {
 
@@ -27,15 +24,10 @@
 
     };
 
-    $scope.search = function(username) {
-
-      gitHub.getUser(username).then(onUserComplete, onError);
-
-    };
-
+      gitHub.getUser($routeParams.username).then(onUserComplete, onError);
 
   };
 
-  app.controller("MainController", ["$scope", "gitHub", MainController]);
+  app.controller("UserController", ["$scope", "$routeParams", "gitHub", UserController]);
 
 }());

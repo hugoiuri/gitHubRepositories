@@ -25,6 +25,6 @@
         };
     };
 
-    var module = angular.module("gitHubViewer");
+    var module = angular.module("gitHubRepositories");
     module.factory("gitHub", gitHub);
 }());

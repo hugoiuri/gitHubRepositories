@@ -1,4 +1,6 @@
-# gitHubViewer
+# gitHubRepositories
+
+Este projto é uma poc utilizando Angularjs. O seu objetivo é consumir a API do GitHub e fazer uma visualização detalhada dos repositorios de um usuário.
 
 Para executar este projeto basta executar os seguintes comandos:
 

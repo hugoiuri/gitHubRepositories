@@ -1,12 +1,16 @@
 (function(){
 
-    var app = angular.module("gitHubViewer", ["ngRoute"]);
+    var app = angular.module("gitHubRepositories", ["ngRoute"]);
 
     app.config(function($routeProvider){
         $routeProvider
             .when("/", {
-                templateUrl: "views/main-controller.html",
-                controller: "MainController"
+                templateUrl: "views/search.html",
+                controller: "SearchController"
+            })
+            .when("/:username", {
+                templateUrl: "views/user.html",
+                controller: "UserController"
             })
             .otherwise({redirectTo: "/"})
     });

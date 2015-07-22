@@ -1,3 +1,8 @@
+<div name="result" ng-include="'views/search.html'" ng-show="user"></div>
+
+<div> {{ error }}</div>
+
+<div>
 <div>
   <div>Name: {{user.name}}</div>
   <div>Location: {{user.location}}</div>
@@ -13,10 +18,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="repo in repos | orderBy:'-stargazers_count'">
+    <tr ng-repeat="repo in repos | orderBy:'+name'">
       <td>{{repo.name}}</td>
       <td>{{repo.stargazers_count | number}}</td>
       <td>{{repo.language}}</td>
     </tr>
   </tbody>
 </table>
+</div>

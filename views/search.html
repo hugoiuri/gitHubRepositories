@@ -1,11 +1,4 @@
-
-
 <form name="searchUser" ng-submit="search(username)">
     <input type="search" required placeholder="Username to find" ng-model="username" />
     <input type="submit" value="Search">
 </form>
-<div> {{ error }}</div>
-
-<div name="result" ng-include="'views/user-detail.html'" ng-show="user">
-
-</div>
