@@ -3,14 +3,18 @@
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
+    "engines": {
+        "node": "0.12.x"
+    }
     "scripts": {
-        "postinstall": "bower install",
+        "postinstall": "/node_modules/bower/bin/bower install",
         "start": "http-server -a 0.0.0.0 -p 8000",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
-    "devDependencies": {
+    "dependencies": {
+        "bower": "^1.4.1",
         "http-server": "^0.8.0"
     }
 }
