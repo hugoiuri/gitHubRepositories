@@ -1,30 +1,32 @@
 {
-    "name": "githubrepositories",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
-    "scripts": {
-        "postinstall": "node_modules/bower/bin/bower install",
-        "start": "http-server",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "bower": "^1.4.1",
-        "http-server": "^0.8.0"
-    },
-    "engines": {
-        "node": "0.12.4"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/hugoiuri/gitHubRepositories"
-    },
-    "keywords": [
-        "node",
-        "heroku",
-        "angular"
-    ],
-    "license": "MIT"
+  "name": "githubrepositories",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "node_modules/bower/bin/bower install",
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "http-server": "^0.8.0"
+  },
+  "engines": {
+    "node": "0.12.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugoiuri/gitHubRepositories"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "angular"
+  ],
+  "devDependencies": {
+    "jasmine": "^2.3.1"
+  }
 }
