@@ -9,6 +9,7 @@ Para executar este projeto basta executar os seguintes comandos:
 ```
 #### Os pacotes npm utilizados neste projeto são:
   - bower
+  - http-server
 
 #### Os pacotes bower utilizados neste projeto são
   - angular

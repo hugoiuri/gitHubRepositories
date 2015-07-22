@@ -1,6 +1,6 @@
 (function() {
 
-  var app = angular.module("gitHubViewer", []);
+  var app = angular.module("gitHubViewer");
 
   var MainController = function($scope, gitHub) {
 
