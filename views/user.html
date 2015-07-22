@@ -1,8 +1,12 @@
-<div name="result" ng-include="'views/search.html'" ng-show="user"></div>
+<div name="result" ng-include="'views/search.html'"></div>
 
 <div> {{ error }}</div>
 
-<div>
+<div ng-hide="user">
+    <img src="content/images/loading.gif" title="Loading..."/>
+</div>
+
+<div ng-show="user">
     <div>
         <div>Name: {{user.name}}</div>
         <div>Location: {{user.location}}</div>
